@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomePageContent extends StatelessWidget {
-  const HomePageContent({super.key});
+  final void Function() start;
+
+  const HomePageContent(this.start, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +14,7 @@ class HomePageContent extends StatelessWidget {
         child: Image.asset(
           'assets/images/logo.png',
           width: 250,
+          color: Colors.lightGreenAccent,
         ),
       ),
       Container(
@@ -28,7 +31,7 @@ class HomePageContent extends StatelessWidget {
         width: 200,
         height: 40,
         child: ElevatedButton.icon(
-            onPressed: () {},
+            onPressed: start,
             // style: ElevatedButton.styleFrom(backgroundColor: Colors.grey),
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.resolveWith((states) {

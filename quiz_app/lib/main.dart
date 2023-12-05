@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/quiz.dart';
 
 import 'homepage_ui.dart';
 
 void main() {
-  runApp(const MaterialApp(home: Scaffold(body: HomePageInterface(),
-  )));
+  runApp(const Quiz());
 }
